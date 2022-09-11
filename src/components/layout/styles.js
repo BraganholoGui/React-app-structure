@@ -5,7 +5,7 @@ export const Grid = styled.div`
   grid:
     "nav header" min-content
     "nav main" 1fr / min-content 1fr;
-  min-height: 100vh;
+  min-height: 90vh;
 `;
 
 export const GridNav = styled.div`

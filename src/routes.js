@@ -6,11 +6,14 @@ import Layout from './components/layout';
 // import GlobalStyle, { Wrapper } from './globalStyles';
 // import store from './reducers/configStore';
 import Home from './pages/Home';
+import store from './reducers/configStore';
 
 
 const AppRoutes = () => {
+useEffect(() => console.log('tese'), []);
+
     return (
-        <Provider data-test="component-app">
+        <Provider store={store} data-test="component-app">
             <Router history={history}>
                 {/* <GlobalStyle /> */}
                 {/* <Wrapper> */}
@@ -19,7 +22,7 @@ const AppRoutes = () => {
                         <Route path="/home">
                             <Home />
                         </Route>
-                        {/* <Redirect path="/" to="/home" /> */}
+                        <Redirect path="/" to="/home" />
                     </Switch>
                 </Layout>
                 {/* </Wrapper> */}
