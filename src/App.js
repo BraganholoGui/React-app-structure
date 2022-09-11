@@ -1,13 +1,12 @@
 import './App.css';
-import HeaderInit from './Header/Header';
+import React, { useState, useEffect } from 'react';
+import AppRoutes from './routes';
 
+export default function App() {
+  const [ready, setReady] = useState(false);
 
-function App() {
-  return (
-    <div className="App">
-      <HeaderInit></HeaderInit>
-    </div>
-  );
+  useEffect(() => setReady(true), []);
+
+  return ready ? <AppRoutes /> : null;
 }
 
-export default App;
